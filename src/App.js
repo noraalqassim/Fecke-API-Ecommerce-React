@@ -1,16 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
+
+import Navbar from "./components/Navbar/NavBar";
+import Home from "./components/Home/Home";
+import Products from "./components/Products/Products";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const productList = [
     {
       id: 1,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
+      title: "Silver Bracelet",
+      price: 239.95,
       description:
-        "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "This product is made to complement an evening gown with variety of colors for your choice.",
+      category: "bracelet",
+      image: "https://www.mohjewelry.com/cdn/shop/files/w_0c2f7e00-6325-47b3-bc62-21e84264da4b_1024x.png?v=1727360201",
       rating: {
         rate: 3.9,
         count: 120,
@@ -18,13 +22,13 @@ function App() {
     },
     {
       id: 2,
-      title: "Mens Casual Premium Slim Fit T-Shirts ",
-      price: 22.3,
+      title: "Gold Bracelet",
+      price: 212.3,
       description:
-        "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-      category: "men's clothing",
+        "This product is made to complement an evening gown with variety of colors for your choice.",
+      category: "bracelet",
       image:
-        "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+        "https://www.mohjewelry.com/cdn/shop/files/0375Y_1024x.png?v=1718270039",
       rating: {
         rate: 4.1,
         count: 259,
@@ -32,12 +36,12 @@ function App() {
     },
     {
       id: 3,
-      title: "Mens Cotton Jacket",
-      price: 55.99,
+      title: "Gold Ring",
+      price: 515.99,
       description:
-        "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+        "This product is made to complement an evening gown with variety of colors for your choice.",
+      category: "ring",
+      image: "https://www.mohjewelry.com/cdn/shop/files/2_b05cb9f6-1d5e-4191-9c9c-7d902e6f6fb2_1024x.png?v=1702215302",
       rating: {
         rate: 4.7,
         count: 500,
@@ -45,12 +49,12 @@ function App() {
     },
     {
       id: 4,
-      title: "Mens Casual Slim Fit",
-      price: 15.99,
+      title: "Silver Ring",
+      price: 467.99,
       description:
-        "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+        "This piece is an 18k gold plated ring with two sparkling lines and a rose shaped zircon in the middle.",
+      category: "ring",
+      image: "https://www.mohjewelry.com/cdn/shop/files/ZYC_1521-3_1024x.png?v=1698928549",
       rating: {
         rate: 2.1,
         count: 430,
@@ -59,12 +63,12 @@ function App() {
     {
       id: 5,
       title:
-        "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+        "Gold Earring",
       price: 695,
       description:
-        "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-      category: "jewelery",
-      image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+        "This product is an 18k gold-plated earrings featuring an elegant design to elevate your daily look.",
+      category: "earring",
+      image: "https://www.mohjewelry.com/cdn/shop/files/3_7c124352-a912-4618-a3e2-285dcba5dfe9_1024x.png?v=1702126764",
       rating: {
         rate: 4.6,
         count: 400,
@@ -72,12 +76,12 @@ function App() {
     },
     {
       id: 6,
-      title: "Solid Gold Petite Micropave ",
-      price: 168,
+      title: "Solid Gold Earring",
+      price: 268,
       description:
-        "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-      category: "jewelery",
-      image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+        "his product is an 18k gold-plated earrings featuring an elegant design to elevate your daily look.",
+      category: "earring",
+      image: "https://www.mohjewelry.com/cdn/shop/files/4_90381e18-8312-46cb-9c81-9c13a2f923c5_1024x.png?v=1702127166",
       rating: {
         rate: 3.9,
         count: 70,
@@ -86,7 +90,10 @@ function App() {
   ];
   return (
     <div className="App">
-      <h1>React assignment</h1>
+      <Navbar />
+      <Home/>
+      <Products productList={productList} />
+      <Footer />
     </div>
   );
 }
