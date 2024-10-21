@@ -7,8 +7,8 @@ export default function Products(prop) {
   return (
     <div className="product">
       <div class="product-heading">
-        <h2>Gemstone</h2>
-        <p>All Gemstones Suit you</p>
+        <h2>Product</h2>
+        <p>Everything you need is here</p>
       </div>
       <div className="productList">
         {prop.productList.map((product) => {

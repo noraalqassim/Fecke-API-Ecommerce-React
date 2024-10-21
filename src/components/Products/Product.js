@@ -8,7 +8,7 @@ export default function Product(prop) {
     <div className="product-box">
       <a href="#" class="product-img">
         <img src={prop.propName.image} alt={prop.propName.title} />
-        <span>New</span>
+        {/*<span>New</span>*/} {/* For new product */}
         <button class="product-cart-but">
           <i class="fas fa-shopping-cart"></i> Add To Cart
         </button>

@@ -19,13 +19,12 @@ export default function Footer() {
     </div>
 
     <ul class="footer-list">
-      <li><a href="#aboutUs">About Us</a> </li>
-      <li><a href="#product">Gemstones</a> </li>
-      <li><a href="#review">Customer Reviews</a></li>
-      <li><a href="#newsletter">Newsletter subscription</a></li>
+      <li><a href="#aboutUs">Home</a> </li>
+      <li><a href="#product">Products</a> </li>
+      <li><a href="#review">Contact us</a></li>
     </ul>
     <p class="footer-copyight">
-      Nora Gemstone Store @2024
+      Nora React Store @2024
     </p>
   </footer>
   )
