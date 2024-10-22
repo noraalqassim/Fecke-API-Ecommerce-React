@@ -1,0 +1,17 @@
+.error{
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .progress{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .error h2{
+    margin-bottom:5px;
+    margin-left:50px;
+    font-size: 5rem;
+    color:#BF9270;
+  }

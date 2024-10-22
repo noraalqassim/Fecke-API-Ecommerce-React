@@ -1,6 +1,7 @@
 import React from "react";
 
 import "../Products/Product.css";
+import { Link } from "react-router-dom";
 
 export default function Product(prop) {
   console.log(prop);
@@ -19,6 +20,9 @@ export default function Product(prop) {
         </a>
         <span>${prop.propName.price}</span>
         {/* <p>{prop.propName.description}</p> */}
+        <Link to={`${prop.propName.id}`}>
+          <button>More details...</button>
+        </Link>
       </div>
     </div>
   );
