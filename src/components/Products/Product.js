@@ -4,11 +4,11 @@ import "../Products/Product.css";
 import { Link } from "react-router-dom";
 
 export default function Product(prop) {
-  console.log(prop);
+  const product = prop.product;
   return (
     <div className="product-box">
       <a href="#" class="product-img">
-        <img src={prop.propName.image} alt={prop.propName.title} />
+        <img src={product.image} alt={product.title} />
         {/*<span>New</span>*/} {/* For new product */}
         <button class="product-cart-but">
           <i class="fas fa-shopping-cart"></i> Add To Cart
@@ -16,11 +16,11 @@ export default function Product(prop) {
       </a>
       <div class="product-text">
         <a href="#" class="product-title">
-          {prop.propName.title}
+          {product.title}
         </a>
-        <span>${prop.propName.price}</span>
+        <span>${product.price}</span>
         {/* <p>{prop.propName.description}</p> */}
-        <Link to={`${prop.propName.id}`}>
+        <Link to={`${product.id}`}>
           <button>More details...</button>
         </Link>
       </div>

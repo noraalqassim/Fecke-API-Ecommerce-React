@@ -1,27 +1,63 @@
-.product-heading {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-  
-  .product-heading h2 {
-    font-size: 3rem;
-    color: #897147;
-    font-weight: 500;
-  }
-  
-  .product-heading p {
-    font-size: 1.5rem;
-    color: #707070;
-  }
+.progress {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
- .productList{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
- }
+.product-heading {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.product-heading h2 {
+  font-size: 3rem;
+  color: #897147;
+  font-weight: 500;
+}
+
+.product-heading p {
+  font-size: 1.5rem;
+  color: #707070;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  width: 600px;
+  height: 50px;
+  background-color: #fcf5ed;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.lable-Searsh {
+  font-size: 28px;
+  color: #897147;
+}
+.input-Searsh {
+  flex: 1;
+  height: 30px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #897147;
+  padding-left: 10px;
+  background-color: #fcf5ed;
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
