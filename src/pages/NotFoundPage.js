@@ -1,11 +1,10 @@
 import React from "react";
 
-import notfound from "../../Images/error.png";
+import Error from "../components/error/Error";
 function NotFoundPage() {
   return (
     <div className="error">
-      <h2>404 Not Found Page</h2>
-      <img src={notfound} alt="404" />
+      <Error />
     </div>
   );
 }

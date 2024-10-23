@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "../Footer/Footer.css";
+import "../footer/Footer.css";
 import { FaInstagram } from "react-icons/fa";
 import { SlSocialYoutube } from "react-icons/sl";
 import { FaFacebookF } from "react-icons/fa";
