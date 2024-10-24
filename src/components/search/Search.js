@@ -19,6 +19,7 @@ export default function Search(prop) {
             className="input-Searsh"
             type="text"
             onChange={onChangeHandler}
+            placeholder="Searsh"
           ></input>
         </form>
       </div>

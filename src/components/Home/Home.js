@@ -23,11 +23,12 @@ export default function Home(prop) {
         curated selection of products on our website.
       </h1>
       <br />
-      <a>
+      {/* <a>
         {" "}
         <Link to="/products">Show Now</Link>{" "}
       </a>
-      <HomeProduct setHomeProduct={setHomeProduct} />
+      <HomeProduct setHomeProduct={setHomeProduct} /> */}
+      <button class="button-50" role="button"><HomeProduct setHomeProduct={setHomeProduct} /> Show Now</button>
     </div>
   );
 }

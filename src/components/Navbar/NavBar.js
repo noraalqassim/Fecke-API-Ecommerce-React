@@ -7,7 +7,6 @@ import { FaBars } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { HiShoppingCart } from "react-icons/hi2";
-import Badge from "@mui/material/Badge";
 
 
 export default function NavBar(prop) {
@@ -32,7 +31,6 @@ export default function NavBar(prop) {
         <a>
           <Link to="/products">Products</Link>
         </a>
-        <a href="#">Contact Us</a>
       </nav>
       <div class="icons">
         <a>

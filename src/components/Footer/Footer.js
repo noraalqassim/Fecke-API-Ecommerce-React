@@ -1,6 +1,7 @@
 import React from 'react'
 
 import "../footer/Footer.css";
+import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { SlSocialYoutube } from "react-icons/sl";
 import { FaFacebookF } from "react-icons/fa";
@@ -19,9 +20,8 @@ export default function Footer() {
     </div>
 
     <ul class="footer-list">
-      <li><a href="#aboutUs">Home</a> </li>
-      <li><a href="#product">Products</a> </li>
-      <li><a href="#review">Contact us</a></li>
+      <li><Link to="/">Home</Link> </li>
+      <li><Link to="/products">Products</Link> </li>
     </ul>
     <p class="footer-copyight">
       Nora React Store @2024

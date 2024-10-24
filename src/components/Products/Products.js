@@ -1,29 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Products.css";
 import Product from "./Product";
 import CircularProgress from "@mui/material/CircularProgress";
 import Error from "../error/Error";
 import Search from "../search/Search";
+import Filter from "../filter/Filter";
 
 export default function Products(prop) {
-  const {
-    productList,
-    userInput,
-    setUserInput,
-    wishList,
-    setWishList,
-  } = prop;
+  const { productList, userInput, setUserInput, wishList, setWishList } = prop;
+
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
   const result = productList.filter((product) =>
     product.title.toLowerCase().includes(userInput.toLowerCase())
   );
 
-
+  const filteredProducts = selectedCategories.length
+    ? productList.filter((product) =>
+        selectedCategories.includes(product.category)
+      )
+    : result;
 
   let products = productList;
   if (userInput) {
     products = result;
+  } else {
+    products = filteredProducts;
   }
 
   if (prop.loading) {
@@ -41,6 +44,9 @@ export default function Products(prop) {
       </div>
     );
   }
+
+  const categories = Array.from(new Set(productList.map((product) => product.category)));
+
   return (
     <div className="product">
       <section>
@@ -49,10 +55,11 @@ export default function Products(prop) {
           <p>Everything you need is here</p>
         </div>
         <Search setUserInput={setUserInput} />
-        <button>Catigory filter</button>
-        <button>Catigory filter</button>
-        <button>Catigory filter</button>
-        <button>Catigory filter</button>
+        <Filter
+          selectedCategories={selectedCategories}
+          setSelectedCategories={setSelectedCategories}
+          categories={categories}
+        />
       </section>
       <div className="productList">
         {products.map((product) => {
