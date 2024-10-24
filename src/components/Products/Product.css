@@ -63,7 +63,8 @@ padding-top: 20px;
   margin-right: 10px;
   transition: 0.3s;
   font-size: 25px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 .wishList a:hover{
-  color: #85654d;
+  transform: scale(1.1); 
 }

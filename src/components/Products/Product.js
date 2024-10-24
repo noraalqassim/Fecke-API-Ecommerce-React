@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./Product.css";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa6";
-import { HiShoppingCart } from "react-icons/hi2";
 import Rating from "@mui/material/Rating";
 
 export default function Product(prop) {
@@ -22,16 +21,6 @@ export default function Product(prop) {
     }
   }
 
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setOpen(false);
-  };
-
-  function getRating(event, newValue) {
-    setValue(newValue);
-  }
 
   return (
     <div className="card">
@@ -56,7 +45,7 @@ export default function Product(prop) {
           <div className="wishList">
             <a
               onClick={() => addToFav(product)}
-              sx={{ color: isFavorited ? "red" : "black" }}
+              style={{ color: isFavorited ? "#85654d" : "#BF9270"  }}
             >
               <FaHeart />
             </a>
