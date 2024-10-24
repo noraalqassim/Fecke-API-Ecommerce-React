@@ -4,18 +4,7 @@
   width: 280px;
   box-shadow: 0 2px 7px #dfdfdf;
 }
-.wishlist{
-  position: absolute;
-  color: #BF9270;
-  top: 20px;
-  left: 20px;
-  font-size:25px;
-  padding: 3px 10px;
-  transition: 0.3s;
-}
-.wishlist:hover{
-  color: #85654d;
-}
+
 .tumb{
   height: 300px;
   padding: 20px;
@@ -68,13 +57,13 @@ padding-top: 20px;
   font-size: 20px;
   font-weight: 400;
 }
-.links a{
+.wishList a{
   color: #BF9270;
   margin-left: 20px;
   margin-right: 10px;
   transition: 0.3s;
-  font-size: 20px;
+  font-size: 25px;
 }
-.links a:hover{
+.wishList a:hover{
   color: #85654d;
 }

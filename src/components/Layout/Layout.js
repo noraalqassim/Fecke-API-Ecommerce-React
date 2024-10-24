@@ -3,10 +3,11 @@ import NavBar from "../navbar/NavBar";
 import Footer from "../footer/Footer";
 import { Outlet } from "react-router-dom";
 
-function Layout() {
+function Layout(prop) {
+  const { wishList } = prop;
   return (
     <div>
-      <NavBar />
+      <NavBar wishList={wishList} />
       <Outlet />
       <Footer />
     </div>

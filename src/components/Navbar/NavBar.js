@@ -7,8 +7,15 @@ import { FaBars } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { HiShoppingCart } from "react-icons/hi2";
+import Badge from "@mui/material/Badge";
 
-export default function NavBar() {
+
+export default function NavBar(prop) {
+  const { wishList } = prop;
+
+  const arrayLength = wishList.length;
+  console.log(arrayLength, "length");
+
   return (
     <header className="p-2">
       <input type="checkbox" name="#" id="toggler" />
@@ -28,7 +35,11 @@ export default function NavBar() {
         <a href="#">Contact Us</a>
       </nav>
       <div class="icons">
-        <Link to="/wishList"><FaHeart /></Link>
+        <a>
+        <Link to="/wishList">
+        <FaHeart /></Link>
+        <span>{arrayLength}</span>
+        </a>
         <a href="#">
           <FaRegUser />
         </a>

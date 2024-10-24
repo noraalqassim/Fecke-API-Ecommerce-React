@@ -22,7 +22,7 @@ function App() {
 
   const [userInput, setUserInput] = useState("");
   const [wishList, setWishList] = useState([]);
-  const [cartItem, setCartItem] = useState([]);
+  const [homeProduct, setHomeProduct] = useState([]);
 
   console.log(userInput);
   console.log(wishList, "wishList");
@@ -63,15 +63,21 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <LayOut />,
+      element: <LayOut wishList={wishList}/>,
       children: [
         {
           path: "/",
-          element: <HomePage />,
+          element: (
+            <HomePage
+              productList={productList}
+              homeProduct={homeProduct}
+              setHomeProduct={setHomeProduct}
+            />
+          ),
         },
         {
           path: "/products",
-          //  prop drilling
+          // prop drilling
           element: (
             <ProductsPage
               productList={productList}
@@ -79,8 +85,6 @@ function App() {
               userInput={userInput}
               wishList={wishList}
               setWishList={setWishList}
-              cartItem={cartItem}
-              setCartItem={setCartItem}
             />
           ),
         },
@@ -90,11 +94,11 @@ function App() {
         },
         {
           path: "/wishList",
-          element: <WishListPage wishList={wishList}/>,
+          element: <WishListPage wishList={wishList} />,
         },
         {
           path: "/cart",
-          element: <CartPage cartItem={cartItem}/>,
+          element: <CartPage />,
         },
         {
           path: "*",

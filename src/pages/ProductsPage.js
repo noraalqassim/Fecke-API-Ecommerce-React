@@ -1,7 +1,8 @@
 import React from "react";
 
 import Products from "../components/Products/Products";
-import Search from "../components/search/Search";
+import NavBar from "../components/navbar/NavBar";
+import Footer from "../components/footer/Footer";
 function ProductsPage(prop) {
   const { productList, setUserInput, userInput, wishList, setWishList,cartItem, setCartItem } = prop;
   return (
