@@ -33,7 +33,7 @@ export default function NavBar() {
           <FaRegUser />
         </a>
         <a href="#">
-          <HiShoppingCart />
+        <Link to="/cart"><HiShoppingCart /></Link>
           <span>0</span>
         </a>
       </div>

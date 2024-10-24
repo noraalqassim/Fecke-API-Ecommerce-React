@@ -19,8 +19,8 @@
   font-size: 1.5rem;
   color: #707070;
 }
-
 .productList {
+  margin-top: 70px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

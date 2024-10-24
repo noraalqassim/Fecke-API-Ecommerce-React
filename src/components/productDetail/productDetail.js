@@ -53,7 +53,7 @@ export default function ProductDetail() {
       {/* <p> {productDetail.title}</p> */}
       <div className="wrapper">
         <dive className="product-img">
-          <img src={productDetail.image}  alr={productDetail.title}/>
+          <img src={productDetail.image} style={{ width: 160 }} alr={productDetail.title}/>
         </dive >
         <div className="product-info">
           <div className="product-text">
@@ -65,7 +65,7 @@ export default function ProductDetail() {
           </div>
           <div className="product-price-btn">
           <p> {productDetail.price} $</p>
-          <button type="button">buy now</button>
+          <button type="button">Add to Cart</button>
           </div>
         </div>
       </div>

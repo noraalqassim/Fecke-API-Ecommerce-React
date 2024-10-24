@@ -7,7 +7,7 @@ import Error from "../error/Error";
 import Search from "../search/Search";
 
 export default function Products(prop) {
-  const { productList, userInput, setUserInput, wishList, setWishList } = prop;
+  const { productList, userInput, setUserInput, wishList, setWishList, cartItem, setCartItem} = prop;
 
   const result = productList.filter((product) =>
     product.title.toLowerCase().includes(userInput.toLowerCase())
@@ -35,11 +35,13 @@ export default function Products(prop) {
   }
   return (
     <div className="product">
+      <section>
       <div class="product-heading">
         <h2>Product</h2>
         <p>Everything you need is here</p>
       </div>
-      <Search setUserInput={setUserInput} />
+      <Search setUserInput={setUserInput} /> 
+      </section>
       <div className="productList">
         {products.map((product) => {
           return (
@@ -48,6 +50,8 @@ export default function Products(prop) {
               product={product}
               wishList={wishList}
               setWishList={setWishList}
+              cartItem={cartItem}
+              setCartItem={setCartItem}
             />
           );
         })}

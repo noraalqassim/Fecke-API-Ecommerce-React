@@ -3,7 +3,7 @@ import React from "react";
 import Products from "../components/Products/Products";
 import Search from "../components/search/Search";
 function ProductsPage(prop) {
-  const { productList, setUserInput, userInput, wishList, setWishList } = prop;
+  const { productList, setUserInput, userInput, wishList, setWishList,cartItem, setCartItem } = prop;
   return (
     <div>
       <Products
@@ -12,6 +12,8 @@ function ProductsPage(prop) {
         setUserInput={setUserInput}
         wishList={wishList}
         setWishList={setWishList}
+        cartItem={cartItem}
+        setCartItem={setCartItem}
       />
     </div>
   );

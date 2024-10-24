@@ -1,76 +1,80 @@
+.card{
+  margin: 50px;
+  position: relative;
+  width: 280px;
+  box-shadow: 0 2px 7px #dfdfdf;
+}
+.wishlist{
+  position: absolute;
+  color: #BF9270;
+  top: 20px;
+  left: 20px;
+  font-size:25px;
+  padding: 3px 10px;
+  transition: 0.3s;
+}
+.wishlist:hover{
+  color: #85654d;
+}
+.tumb{
+  height: 300px;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+.tumb img{
+  max-height: 100%;
+  max-width: 100%;
+}
 
-  .product-box {
-    max-width: 250px;
-    width: 100%;
-    margin: 50px 50px 50px 50px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-  }
-  
-  .product-img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-  }
-  .product-img img {
-    height:150px;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .product-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px 20px;
-  }
-  .product-text .product-title {
-    color: #1d1d1d;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  .product-text span {
-    color: #cab273;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .product-text p {
-    font-size: 0.9rem;
-    height: 100%;
-  }
-  
-  .product-cart-but {
-    position: absolute;
-    left: 50%;
-    bottom: -100%;
-    transform: translateX(-50%);
-    background-color: #8988838f;
-    border: none;
-    outline: none;
-    width: 130px;
-    height: 40px;
-    border-radius: 30px;
-    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.01);
-    font-weight: 500;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: all ease 0.2s;
-  }
-  .product-cart-but i {
-    color: #1d1d1d;
-    margin-right: 5px;
-  }
-  
-  .product-img:hover .product-cart-but {
-    bottom: 20px;
-  }
+.details{
+  padding: 30px;
+}
+
+.category{
+  display: block;
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+h4 a{
+  font-size: 18px;
+  /* font-weight: 500; */
+  color: #363636;
+  display: block;
+  margin-bottom: 18px;
+  text-decoration: none;
+  transform: 0.3s;
+}
+
+h4 a:hover{
+  color: #85654d;
+}
+
+.botton-details{
+overflow: hidden;
+border-top: 1px solid #eee;
+padding-top: 20px;
+}
+.botton-details div{
+  float:left;
+  width: 50%;
+}
+.price{
+  color: #BF9270;
+  font-size: 20px;
+  font-weight: 400;
+}
+.links a{
+  color: #BF9270;
+  margin-left: 20px;
+  margin-right: 10px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.links a:hover{
+  color: #85654d;
+}
