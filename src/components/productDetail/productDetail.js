@@ -12,7 +12,6 @@ export default function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [cartItem, setCartItem] = useState([]);
-  
 
   const productDetailUrl = `https://fakestoreapi.com/products/${productId}`;
 
@@ -50,13 +49,9 @@ export default function ProductDetail() {
     );
   }
 
-  function addToCart(productDetail) {
-    setCartItem([...cartItem, productDetail]);
-  }
   return (
     <div>
-      {/* <p> {productDetail.title}</p> */}
-      <div className="wrapper">
+      <div className="wrapper-product">
         <dive className="product-img">
           <img
             src={productDetail.image}
@@ -72,7 +67,9 @@ export default function ProductDetail() {
           </div>
           <div className="product-price-btn">
             <p> {productDetail.price} $</p>
-            <button type="button" onClick={() => addToCart(productDetail)}>Add to Cart</button>
+            <button type="button">
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>

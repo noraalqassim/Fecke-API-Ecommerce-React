@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect } from "react";
 
 import "./Product.css";
 import { Link } from "react-router-dom";
@@ -8,22 +8,39 @@ import Rating from "@mui/material/Rating";
 export default function Product(prop) {
   const { product, wishList, setWishList } = prop;
 
-  const [isFavorited, setIsFavorited] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState(0);
+  const isFavorited = wishList.some((item) => item.id === product.id);
+
+  useEffect(() => {
+    const storedWishList = localStorage.getItem("wishList");
+    const storedIsFavorited = localStorage.getItem("isFavorited");
+
+    if (storedWishList) {
+      setWishList(JSON.parse(storedWishList));
+    }
+  }, []);
 
   function addToFav(product) {
     const isInclude = wishList.some((item) => item.id === product.id);
     if (!isInclude) {
-      setWishList([...wishList, product]);
-      setIsFavorited(true);
-      setOpen(true);
+      const updatedWishList = [...wishList, product];
+      setWishList(updatedWishList);
+
+      localStorage.setItem("wishList", JSON.stringify(updatedWishList));
+      localStorage.setItem("isFavorited", JSON.stringify(true));
+    } else {
+      if (isInclude) {
+        const updatedWishList = wishList.filter(
+          (item) => item.id !== product.id
+        );
+        setWishList(updatedWishList);
+
+        localStorage.setItem("wishList", JSON.stringify(updatedWishList));
+      }
     }
   }
 
-
   return (
-    <div className="card">
+    <div className="card-item">
       <div className="tumb">
         <img style={{ width: 160 }} src={product.image} alt={product.title} />
       </div>
@@ -45,7 +62,7 @@ export default function Product(prop) {
           <div className="wishList">
             <a
               onClick={() => addToFav(product)}
-              style={{ color: isFavorited ? "#85654d" : "#BF9270"  }}
+              style={{ color: isFavorited ? "#85654d" : "#BF9270" }}
             >
               <FaHeart />
             </a>

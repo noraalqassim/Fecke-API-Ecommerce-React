@@ -3,21 +3,23 @@ import React from "react";
 import "../whishlist/WishListItem.css";
 import { MdDeleteOutline } from "react-icons/md";
 export default function WishListItem(prop) {
-  const { item } = prop;
+  const { item, deleteItem } = prop;
+
+  const handleDelete = () => {
+    deleteItem(item.id);
+  };
   return (
-    <div className=".shopping-cart">
-    <div className="item">
-      <div className="buttons">
-        <span className="delete-btn">
-          <MdDeleteOutline />
-        </span>
+    <div className="wishlist-border">
+      <div className="wishlist-item">
+        <div className="delet-wishlist-button">
+          <MdDeleteOutline   onClick={handleDelete}/>
+        </div>
+        <div className="wishlist-image">
+          <img src={item.image} style={{ width: 60 }} alr={item.title} />
+        </div>
+        <div className="wishlist-description">{item.title}</div>
+        <div className="wishlist-price">${item.price}</div>
       </div>
-      <div className="image">
-        <img src={item.image} style={{ width: 60 }} alr={item.title} />
-      </div>
-      <div className="description">{item.title}</div>
-      <div className="total-price">${item.price}</div>
-    </div>
     </div>
   );
 }

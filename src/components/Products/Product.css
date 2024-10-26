@@ -1,4 +1,4 @@
-.card{
+.card-item{
   margin: 50px;
   position: relative;
   width: 280px;
@@ -31,7 +31,6 @@
 
 h4 a{
   font-size: 18px;
-  /* font-weight: 500; */
   color: #363636;
   display: block;
   margin-bottom: 18px;

@@ -1,17 +1,18 @@
 import React from "react";
 
 import Home from "../components/home/Home";
-import NavBar from "../components/navbar/NavBar";
-import Footer from "../components/footer/Footer";
+import Hero from "../components/hero/Hero";
 function HomePage(prop) {
-  const { productList, homeProduct, setHomeProduct } = prop;
+  const { productList } = prop;
+
+  const filteredProducts = productList.filter(
+    (product) => product.rating.rate >= 4.5
+  );
+
   return (
     <div>
-      <Home
-        productList={productList}
-        homeProduct={homeProduct}
-        setHomeProduct={setHomeProduct}
-      />
+      <Hero />
+      <Home productList={filteredProducts} />
     </div>
   );
 }
