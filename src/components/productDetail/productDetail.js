@@ -52,13 +52,13 @@ export default function ProductDetail() {
   return (
     <div>
       <div className="wrapper-product">
-        <dive className="product-img">
+        <div className="product-img">
           <img
             src={productDetail.image}
             style={{ width: 160 }}
             alr={productDetail.title}
           />
-        </dive>
+        </div>
         <div className="product-info">
           <div className="product-text">
             <h1>{productDetail.title}</h1>

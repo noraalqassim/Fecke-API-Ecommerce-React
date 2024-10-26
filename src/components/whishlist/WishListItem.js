@@ -15,7 +15,7 @@ export default function WishListItem(prop) {
           <MdDeleteOutline   onClick={handleDelete}/>
         </div>
         <div className="wishlist-image">
-          <img src={item.image} style={{ width: 60 }} alr={item.title} />
+          <img src={item.image} style={{ width: 60 }} alt={item.title} />
         </div>
         <div className="wishlist-description">{item.title}</div>
         <div className="wishlist-price">${item.price}</div>
