@@ -1,7 +1,7 @@
 import React from 'react'
 
 import "../error/Error.css"
-import notfound from "../../images/error.png";
+import notfound from "../../Images/error.png";
 export default function error() {
   return (
     <div className="error">
