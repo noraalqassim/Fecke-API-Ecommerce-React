@@ -1,6 +1,6 @@
 import React from "react";
 
-import EmptyCart from "../../images/EmptyCart.png";
+import EmptyCart from "../../Images/EmptyCart.png";
 export default function Cart() {
 
   return (

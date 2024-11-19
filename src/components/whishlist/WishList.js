@@ -1,7 +1,7 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "../whishlist/WishList.css";
 import WishListItem from "./WishListItem";
-import emptyWishlist from "../../images/EmptyWishlist.png";
+import emptyWishlist from "../../Images/EmptyWishlist.png";
 export default function WishList(prop) {
   const { wishList, setWishList } = prop;
 
