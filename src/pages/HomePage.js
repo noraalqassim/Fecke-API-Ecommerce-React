@@ -1,6 +1,6 @@
 import React from "react";
 
-import Home from "../components/Home/Home";
+import Home from "../components/home/Home";
 import Hero from "../components/hero/Hero";
 function HomePage(prop) {
   const { productList } = prop;
