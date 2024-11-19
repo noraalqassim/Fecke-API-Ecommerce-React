@@ -26,4 +26,4 @@ This React assignment consists of three levels. Each level introduces new featur
 - Styling: Add custom styling to the website to enhance the user experience.
 - Loading and Error Handling: Implement logic to show a loading spinner or message while fetching data.Handle potential errors, such as failed data fetches, by displaying an error message.
 
-**_Deadline 5pm 24/10/2024_**
+**_Deploy link: https://sda-fecke-api-ecommerce-react.onrender.com_**
